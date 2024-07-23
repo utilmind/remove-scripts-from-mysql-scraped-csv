@@ -15,7 +15,7 @@ if ($data = file_get_contents('processed.csv')) {
 
     if ($cnt == 169) { // 169 = 5 parts, 69 = 12 parts, 39 = 21 parts (files less than 1 Mb)
       ++$cur;
-      file_put_contents('prc/part_'.$cur.'.csv', $part);
+      write_file('prc/part_'.$cur.'.csv', $part);
       $cnt = 0;
       $part = '';
     }
@@ -27,5 +27,5 @@ if ($data = file_get_contents('processed.csv')) {
     ++$cnt;
   }
   ++$cur;
-  file_put_contents('prc/part_'.$cur.'.csv', $part);
+  write_file('prc/part_'.$cur.'.csv', $part);
 }
