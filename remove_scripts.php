@@ -80,7 +80,7 @@ if (isset($argv[1]) && isset($argv[2]) &&
 if ($db_table || (isset($_GET['table']) && ($db_table = $_GET['table']))) {
 
   if (!$db_link = mysql_connect($db_host, $db_user, $db_pass)) {
-    print 'Can\'t connect to db. Please set up configuration.';
+    echo 'Can\'t connect to db. Please set up configuration.';
     exit;
   }
   $mtime = microtime(1);
@@ -88,6 +88,7 @@ if ($db_table || (isset($_GET['table']) && ($db_table = $_GET['table']))) {
   process_db_table($db_table, $db_field, $stop_delimiter); // process
   mysql_close($db_link);     // close
 
-  print 'Done in '.number_format((microtime(1) - $mtime), 2).' seconds.';
-}else
-  print 'Please provide "table" parameter.';
+  echo 'Done in '.number_format((microtime(1) - $mtime), 2).' seconds.';
+}else {
+  echo 'Please provide "table" parameter.';
+}
