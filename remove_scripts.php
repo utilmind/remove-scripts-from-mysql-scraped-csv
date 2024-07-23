@@ -40,11 +40,11 @@ function process_db_table($db_table, $db_field = false, $stop_delimiter = false)
 
   if (is_array($updates))
     foreach ($updates as $key => $val) {
-      print "Updating index #$indexes[$key]...<br />\n";
+      echo "Updating index #$indexes[$key]...<br />\n";
       mysql_query($val);
 
       // debug
-      print mysql_error();
+      echo mysql_error();
       // print "$val<br />\n";
     }
 }
