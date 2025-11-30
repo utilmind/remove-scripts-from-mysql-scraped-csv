@@ -1,5 +1,4 @@
 # remove-scripts-from-mysql-scraped-csv
-The script used to remove all &lt;script>'s from mySQL scraped database. Works both for live mySQL db and/or CSV.
 
 The script used to remove all <script>'s from mySQL scraped database. Works both for live mySQL db and/or CSV.
 
